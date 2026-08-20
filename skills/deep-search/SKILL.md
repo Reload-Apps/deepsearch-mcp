@@ -9,7 +9,7 @@ Look up real people from a name, phone, email, or username using the hosted Deep
 
 ## When to use
 
-- Recruiting checks, sales or partner diligence, journalism, or reconnecting with someone
+- Journalism, reconnecting with someone, or business research that is not for hiring, credit, housing, or insurance decisions
 - The user gives a name, phone, email, or username and wants candidates, a sourced profile, or one fact
 
 Do **not** use this skill for surveillance, stalking, or harassment. Do **not** use it to make employment, credit, housing, or insurance decisions. Deep Search is not a consumer reporting agency and its output is not a consumer report.
