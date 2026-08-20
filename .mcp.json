@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "deepsearch": {
+      "type": "http",
+      "url": "https://deepsearch.app/api/mcp"
+    }
+  }
+}
