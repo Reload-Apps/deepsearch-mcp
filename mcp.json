@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "deepsearch": {
+      "url": "https://deepsearch.app/api/mcp"
+    }
+  }
+}

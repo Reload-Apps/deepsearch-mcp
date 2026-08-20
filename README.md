@@ -28,6 +28,30 @@ Scopes map one-to-one onto the tools: `search`, `dossier`, `chat`.
 
 ## Install
 
+### Cursor / Grok Bot plugin
+
+This repository is a single-plugin Cursor package. After marketplace review it
+lists as **Deep Search** (not the kebab-case id) with the official logo.
+
+1. In Cursor, open **Customize** and install **Deep Search** from the
+   [Marketplace](https://cursor.com/marketplace). In Grok Bot, open **Plugins**
+   and add **Deep Search**.
+2. Authorize with OAuth when prompted. No API key or plugin variable is
+   required — the hosted server uses OAuth 2.1.
+
+Until the listing is live, load the plugin locally and reload Cursor
+(**Developer: Reload Window**):
+
+```bash
+git clone https://github.com/Reload-Apps/deepsearch-mcp.git ~/.cursor/plugins/local/deep-search
+```
+
+Or copy / symlink an existing checkout into `~/.cursor/plugins/local/deep-search`.
+Publishers submit this repo at
+[cursor.com/marketplace/publish](https://cursor.com/marketplace/publish).
+
+To add the hosted MCP server without the plugin, use the client configs below.
+
 ### Claude Code
 
 ```bash
@@ -124,4 +148,4 @@ People can remove themselves at https://deepsearch.app/remove-my-info.
 ## License
 
 MIT — see [LICENSE](./LICENSE). The hosted service itself is proprietary; this repository
-covers the manifest, documentation, and client configuration.
+covers the Cursor plugin, MCP Registry manifest, documentation, and client configuration.
