@@ -52,7 +52,28 @@ Publishers submit this repo at
 
 To add the hosted MCP server without the plugin, use the client configs below.
 
-### Claude Code
+### Claude Code / Cowork plugin
+
+This repository is also a Claude Code plugin (`.claude-plugin/plugin.json`).
+After directory review it lists as **Deep Search** in the
+[Claude plugin directory](https://claude.com/plugins) for Cowork and Claude Code.
+
+1. In Claude Code, open `/plugin` and install **Deep Search**. In Cowork, open
+   **Plugins** and add **Deep Search**.
+2. Authorize with OAuth when prompted (`/mcp` in Claude Code). No API key is
+   required — the hosted server uses OAuth 2.1 with dynamic client registration.
+
+Until the listing is live, load this checkout as a plugin directory:
+
+```bash
+claude --plugin-dir /path/to/deepsearch-mcp
+```
+
+Publishers submit this repo at
+[platform.claude.com/plugins/submit](https://platform.claude.com/plugins/submit).
+Validate locally with `claude plugin validate .` (see [SETUP.md](./SETUP.md)).
+
+To add the hosted MCP server without the plugin:
 
 ```bash
 claude mcp add --transport http deepsearch https://deepsearch.app/api/mcp
@@ -148,4 +169,4 @@ People can remove themselves at https://deepsearch.app/remove-my-info.
 ## License
 
 MIT — see [LICENSE](./LICENSE). The hosted service itself is proprietary; this repository
-covers the Cursor plugin, MCP Registry manifest, documentation, and client configuration.
+covers the Cursor plugin, Claude Code plugin, MCP Registry manifest, documentation, and client configuration.

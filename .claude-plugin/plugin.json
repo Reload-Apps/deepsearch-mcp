@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "deep-search",
+  "displayName": "Deep Search",
+  "version": "1.0.0",
+  "description": "Research a person's public footprint from a name, phone, email, or username. Sourced. Public web only.",
+  "author": {
+    "name": "Reload",
+    "email": "can@reload.app"
+  },
+  "homepage": "https://deepsearch.app",
+  "repository": "https://github.com/Reload-Apps/deepsearch-mcp",
+  "license": "MIT",
+  "keywords": [
+    "people-search",
+    "mcp",
+    "osint",
+    "lookup"
+  ]
+}
