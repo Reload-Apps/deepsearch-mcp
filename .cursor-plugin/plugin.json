@@ -1,8 +1,8 @@
 {
   "name": "deep-search",
   "displayName": "Deep Search",
-  "version": "1.0.0",
-  "description": "Research a person's public footprint from a name, phone, email, or username. Sourced. Public web only.",
+  "version": "1.0.1",
+  "description": "Sourced public research with your Deep Search account, directly in Cursor.",
   "author": {
     "name": "Reload",
     "email": "can@reload.app"
@@ -11,10 +11,11 @@
   "repository": "https://github.com/Reload-Apps/deepsearch-mcp",
   "license": "MIT",
   "keywords": [
-    "people-search",
     "mcp",
-    "osint",
-    "lookup"
+    "research",
+    "public-data",
+    "companies",
+    "vehicles"
   ],
   "logo": "assets/logo.png"
 }

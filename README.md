@@ -1,10 +1,10 @@
-# DeepSearch MCP Server
+# Deep Search MCP Server
 
-Research a person's public online footprint from a name, phone number, email address, or
-username — ranked candidate people with confidence scores, then a dossier with a linked
-source for every detail. Public sources only.
+Research public information with your Deep Search account. Compare candidate matches,
+build sourced reports, research companies and vehicles, and inspect public image
+appearances. Source availability varies; keep uncertainty and distinct identities clear.
 
-DeepSearch is a **hosted remote MCP server**. There is nothing to install or run: point
+Deep Search is a **hosted remote MCP server**. There is nothing to install or run: point
 your client at `https://deepsearch.app/api/mcp` and authorize.
 
 - **Endpoint:** `https://deepsearch.app/api/mcp`
@@ -15,16 +15,32 @@ your client at `https://deepsearch.app/api/mcp` and authorize.
 
 ## Tools
 
+The hosted developer endpoint exposes the following tools (verified 20 October 2026).
+Clients should discover the current schemas through `tools/list`.
+
 | Tool | What it does |
 | --- | --- |
-| `search_people` | Resolves one identifier — name, phone, email, or username — to a ranked list of real, distinct people, each with a confidence score. Separates same-name individuals into candidates you can choose between, rather than returning pages to reconcile yourself. |
-| `build_dossier` | Assembles one person's entire public footprint into a single sourced profile: identity, contact details, social accounts unified across platforms, work history, education, relatives, locations, and web mentions — every claim linked to the page it came from. |
-| `ask_about_person` | Answers one specific question about a person, grounded in their public footprint, and suggests follow-ups. Cheaper and more direct than a full dossier when you want a single fact. |
+| `search_people` | Finds distinct candidate matches for a user-supplied identifier. Compare candidates before selecting one. |
+| `build_dossier` | Builds a sourced public-information report for a selected subject. |
+| `ask_about_person` | Investigates a specific question using public evidence. |
+| `search_companies` | Finds company candidates; keep legal entities and jurisdictions separate. |
+| `build_company_dossier` | Builds a sourced company report. |
+| `reverse_image_search` | Finds available public appearances of a supplied image. |
+| `lookup_vin` | Researches vehicle specifications and available records from a VIN. Missing records do not prove a clean history. |
+| `create_lookup_job` | Starts a background research operation. |
+| `get_lookup_job` | Reads a background operation's status or available result. |
+| `get_lookup_job_events` | Reads progress events for a background research operation. |
+| `cancel_lookup_job` | Requests cancellation of a background operation. |
+| `list_lookup_jobs` | Lists the connected account's accessible research jobs. |
 
-All three tools are read-only (`readOnlyHint: true`, `destructiveHint: false`) and touch the
-open web (`openWorldHint: true`). None of them mutate anything.
+Research can consume the connected account's included usage and create reports or job
+state. Do not describe every research tool as having no side effects. Follow each live
+schema's required inputs and authorization scopes. Preserve an operation's original
+idempotency key when retrying, where that schema supports it.
 
-Scopes map one-to-one onto the tools: `search`, `dossier`, `chat`.
+This public developer package uses the full `/api/mcp` endpoint. The separate Muse,
+ChatGPT and Claude directory connector profiles use their own restricted endpoints;
+this repository is not their company-and-VIN submission package.
 
 ## Install
 
@@ -46,7 +62,8 @@ Until the listing is live, load the plugin locally and reload Cursor
 git clone https://github.com/Reload-Apps/deepsearch-mcp.git ~/.cursor/plugins/local/deep-search
 ```
 
-Or copy / symlink an existing checkout into `~/.cursor/plugins/local/deep-search`.
+Or copy an existing checkout into `~/.cursor/plugins/local/deep-search`. Cursor skips
+symlinks whose target is outside its local plugin folder.
 Publishers submit this repo at
 [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish).
 
@@ -130,7 +147,7 @@ To use an API key instead, create one at https://deepsearch.app/api and send it 
 A `401` means the token is missing, expired, or invalid — refresh or re-authorize, then
 retry. A `403` means the token is missing a scope the tool requires.
 
-DeepSearch cannot be billed to an agent directly. If a tool result says the user must sign
+Deep Search cannot be billed to an agent directly. If a tool result says the user must sign
 in, subscribe, or add credits, relay that message and its URL to the user, then retry.
 
 ## Discovery documents
@@ -157,11 +174,11 @@ npm i -g @reloadapp/deepsearch-cli   # CLI
 
 ## Acceptable use
 
-DeepSearch searches **public sources only**. It is built for recruiting checks, sales and
-partner diligence, journalism, and reconnecting with people.
+Deep Search searches **public sources only**. It is built for public-source
+research, sales and partner diligence, journalism, and reconnecting with people.
 
 It must **not** be used for surveillance, stalking, or harassment, and must **not** be used
-to make employment, credit, housing, or insurance decisions. DeepSearch is not a consumer
+to make employment, credit, housing, or insurance decisions. Deep Search is not a consumer
 reporting agency and its output is not a consumer report.
 
 People can remove themselves at https://deepsearch.app/remove-my-info.
