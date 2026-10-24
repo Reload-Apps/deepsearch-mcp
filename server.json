@@ -2,8 +2,15 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "app.deepsearch/deepsearch",
   "title": "DeepSearch",
-  "description": "Research a person's public footprint from a name, phone, email, or username. Sourced.",
+  "description": "Sourced public research with your Deep Search account.",
   "version": "1.0.1",
+  "keywords": [
+    "mcp",
+    "research",
+    "public-data",
+    "companies",
+    "vehicles"
+  ],
   "websiteUrl": "https://deepsearch.app/api/docs",
   "remotes": [
     {
