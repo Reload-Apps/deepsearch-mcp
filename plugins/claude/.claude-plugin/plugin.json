@@ -1,0 +1,15 @@
+{
+  "name": "deepsearch",
+  "displayName": "Deep Search",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Find companies, build sourced company reports, and research vehicle VINs with your existing Deep Search account.",
+  "author": { "name": "DeepSearch", "url": "https://deepsearch.app" },
+  "homepage": "https://deepsearch.app",
+  "documentationUrl": "https://deepsearch.app/api/docs/directory-connectors",
+  "supportUrl": "https://deepsearch.app/contact",
+  "privacyPolicyUrl": "https://deepsearch.app/privacy",
+  "termsOfServiceUrl": "https://deepsearch.app/terms",
+  "icon": "./assets/logo.png",
+  "keywords": ["research", "companies", "vehicles", "sources"]
+}
