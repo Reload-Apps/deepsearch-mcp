@@ -41,6 +41,10 @@ Keep the original request key when retrying; a new key can start new research.
 Sources may be incomplete or conflicting. Vehicle reports do not identify owners,
 track vehicles or prove that missing history is a clean record.
 
+Do not use Deep Search for surveillance, stalking, harassment, or decisions
+about employment, credit, housing, or insurance eligibility. Follow the
+service's terms and applicable law when using public evidence.
+
 ## Privacy and support
 
 Research inputs are sent to Deep Search and its research providers. The service
